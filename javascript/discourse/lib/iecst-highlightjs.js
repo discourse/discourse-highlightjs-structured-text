@@ -1,7 +1,7 @@
 module.exports = function (hljs) {
     return {
         aliases: ["iecst", "scl", "stl", "structured-text"],
-        name: "Structured Text",
+        name: "structured-text",
         case_insensitive: true,
         keywords: {
             keyword:
