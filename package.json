@@ -1,7 +1,7 @@
 {
-  "name": "TODO",
+  "name": "highlightjs-structured-text",
   "version": "0.0.1",
-  "repository": "TODO",
+  "repository": "https://github.com/discourse/discourse-highlightjs-structured-text",
   "author": "Discourse",
   "license": "MIT",
   "devDependencies": {

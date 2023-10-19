@@ -1,5 +1,4 @@
-# **Theme Name**
+# **Highlight.js Structured Text**
 
 **Theme Summary**
-
-For more information, please see: **url to meta topic**
+This component adds syntax highlighting for Structured Text inside Markdown code blocks.
