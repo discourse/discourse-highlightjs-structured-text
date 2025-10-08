@@ -4,7 +4,7 @@ import iecst from "../lib/iecst-highlightjs";
 export default {
   name: "highlightjs-structured-text",
   initialize() {
-    withPluginApi("1.4.0", (api) => {
+    withPluginApi((api) => {
       api.registerHighlightJSLanguage("structured-text", iecst);
     });
   },
