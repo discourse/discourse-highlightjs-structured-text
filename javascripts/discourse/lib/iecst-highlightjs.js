@@ -228,7 +228,7 @@ export default function (hljs) {
     ],
   };
 
-  const OPERATORS = [
+  const OPERATORS_LIST = [
     "+",
     "-",
     "*",
@@ -250,6 +250,17 @@ export default function (hljs) {
     "}",
     "$",
   ];
+
+  const OPERATOR_RE = new RegExp(
+    `(${OPERATORS_LIST.map(
+      (op) => op.replace(/[-/\\^$*+?.()|[\]{}]/g, "\\$&") // escape regex chars
+    ).join("|")})`
+  );
+
+  const OPERATORS = {
+    className: "operator",
+    begin: OPERATOR_RE,
+  };
 
   const TYPED_LITERALS = {
     className: "literal",
@@ -352,6 +363,7 @@ export default function (hljs) {
       POINTER_TYPE,
       REFERENCE_TYPE,
       ARRAY_TYPE,
+      OPERATORS,
     ],
   };
 }
