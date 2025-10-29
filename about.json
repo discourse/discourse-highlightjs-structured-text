@@ -1,6 +1,6 @@
 {
-    "name": "Structured Text Syntax Highlighting",
-    "component": true,
-    "authors": "Discourse",
-    "about_url": "https://github.com/italoaalves/discourse-highlightjs-structured-text"
-  }
+  "name": "Structured Text Syntax Highlighting",
+  "component": true,
+  "authors": "Discourse",
+  "about_url": "https://github.com/italoaalves/discourse-highlightjs-structured-text"
+}
