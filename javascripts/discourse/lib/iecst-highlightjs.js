@@ -56,6 +56,7 @@ export default function (hljs) {
     "IF",
     "THEN",
     "ELSE",
+    "ELSIF",
     "END_IF",
     "FOR",
     "DO",
@@ -228,7 +229,7 @@ export default function (hljs) {
     ],
   };
 
-  const OPERATORS_LIST = [
+  const OPERATORS = [
     "+",
     "-",
     "*",
@@ -251,16 +252,16 @@ export default function (hljs) {
     "$",
   ];
 
-  const OPERATOR_RE = new RegExp(
-    `(${OPERATORS_LIST.map(
-      (op) => op.replace(/[-/\\^$*+?.()|[\]{}]/g, "\\$&") // escape regex chars
-    ).join("|")})`
-  );
+  // const OPERATOR_RE = new RegExp(
+  //   `(${OPERATORS_LIST.map(
+  //     (op) => op.replace(/[-/\\^$*+?.()|[\]{}]/g, "\\$&") // escape regex chars
+  //   ).join("|")})`
+  // );
 
-  const OPERATORS = {
-    className: "operator",
-    begin: OPERATOR_RE,
-  };
+  // const OPERATORS2 = {
+  //   className: "operator",
+  //   begin: OPERATOR_RE,
+  // };
 
   const TYPED_LITERALS = {
     className: "literal",
@@ -353,6 +354,7 @@ export default function (hljs) {
       literal: "TRUE FALSE",
       type: TYPES.join(" "),
       built_in: BUILT_IN.join(" "),
+      operators: OPERATORS.join(" ")
     },
     contains: [
       COMMENT,
@@ -363,7 +365,6 @@ export default function (hljs) {
       POINTER_TYPE,
       REFERENCE_TYPE,
       ARRAY_TYPE,
-      OPERATORS,
     ],
   };
 }
