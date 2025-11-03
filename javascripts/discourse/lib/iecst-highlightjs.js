@@ -56,6 +56,7 @@ export default function (hljs) {
     "IF",
     "THEN",
     "ELSE",
+    "ELSIF",
     "END_IF",
     "FOR",
     "DO",
